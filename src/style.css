@@ -6,3 +6,8 @@ body {
     padding: 0;
 }
 
+.flex {
+    display: flex;
+    align-items: center;
+}
+

@@ -1,6 +1,6 @@
 <template>
   <a :href="href" :target="target" @click="handleClick">
-    <img alt="icon" :src="IconMap[name]" :style="`width:${size}px;height:${size}px`"/>
+    <img alt="icon" class="icon" :src="IconMap[name]" :style="`width:${size}px;height:${size}px`"/>
   </a>
 </template>
 <script setup>
@@ -13,7 +13,7 @@ const props = defineProps({
   },
   target: {
     type: String,
-    default: '_self'
+    default: '_blank'
   },
   name: {
     type: String,
@@ -30,5 +30,7 @@ const handleClick = () => {
 }
 </script>
 <style scoped>
-
+.icon {
+  display: block;
+}
 </style>
