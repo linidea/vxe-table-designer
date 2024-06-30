@@ -1,7 +1,6 @@
 <template>
-  123
+  <Designer/>
 </template>
-
-<style scoped>
-
-</style>
+<script setup>
+import Designer from '@v/index.vue'
+</script>
