@@ -2,7 +2,7 @@
 
 ## 介绍
 
-基于 vxe-table 的[表格设计器](https://table.linops.top)
+基于 vxe-table 的可视化表格设计器 [网站演示](https://table.linops.top){:target="_blank"}
 
 ### 项目背景
 
