@@ -5,7 +5,7 @@
       <b class="title"> Vxe Table Designer</b>
     </div>
     <div class="flex">
-      <Icon name="github" href="https://github.com/linidea/vxe-table-designer"/>
+      <Icon name="github" href="https://github.com/linidea/vxe-table-designer" target="_blank"/>
     </div>
   </div>
 </template>
