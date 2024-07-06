@@ -6,6 +6,10 @@ body {
     padding: 0;
 }
 
+div {
+    outline: none;
+}
+
 .flex {
     display: flex;
     align-items: center;
