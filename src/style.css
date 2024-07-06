@@ -1,15 +1,11 @@
-:root {
-}
-
-body {
+/*浏览器默认样式*/
+body, div {
     margin: 0;
     padding: 0;
-}
-
-div {
     outline: none;
 }
 
+/*全局常用样式*/
 .flex {
     display: flex;
     align-items: center;
