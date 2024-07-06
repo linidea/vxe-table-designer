@@ -34,7 +34,8 @@ const sidebarData = ref([
 <style scoped>
 .sidebar {
   box-sizing: border-box;
-  width: 60px;
+  padding: 8px 0;
+  width: 50px;
   height: 100%;
   border-right: 1px solid #ddd;
   display: flex;
