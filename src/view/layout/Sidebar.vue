@@ -33,6 +33,16 @@ const sidebarData = ref([
     icon: "puzzle",
     intro: "列项配置",
   },
+  {
+    name: "json",
+    icon: "json",
+    intro: "JSON配置",
+  },
+  {
+    name: "database",
+    icon: "database",
+    intro: "表格数据"
+  }
 ]);
 //
 let activeName = ref("base");
