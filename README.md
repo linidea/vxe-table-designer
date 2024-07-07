@@ -20,3 +20,7 @@
 npm install
 npm run dev
 ```
+
+## 友情链接
+
+## 开源协议
