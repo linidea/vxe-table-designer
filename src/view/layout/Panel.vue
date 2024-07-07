@@ -1,16 +1,21 @@
 <template>
   <div class="panel">
-    <div class="left" :style="{width:leftPanelWidth + 'px'}">left</div>
+    <div :style="{width:leftPanelWidth + 'px'}"></div>
     <div class="divider" @mousedown="startDragging"></div>
-    <div class="right">right</div>
+    <div class="right">
+      <Preview/>
+    </div>
   </div>
 </template>
 <script setup>
+import Preview from "@v/preview/index.vue";
+//
 import {ref} from 'vue'
 
 const isDragging = ref(false);
-const minWidth = 300;
 let leftPanelWidth = ref(500);
+const maxLeftPanelWidth = 1200;
+const minLeftPanelWidth = 200;
 let startX = 0;
 let startWidth = 0;
 
@@ -33,8 +38,9 @@ const handleMouseMove = (e) => {
   if (!isDragging.value) return;
   const deltaX = e.clientX - startX;
   let newWidth = startWidth + deltaX;
-  if (newWidth>1000) newWidth = 1000;
-  leftPanelWidth.value = Math.max(newWidth, minWidth); // 确保新宽度不小于最小宽度
+  if (newWidth > maxLeftPanelWidth) newWidth = maxLeftPanelWidth;
+  if (newWidth < minLeftPanelWidth) newWidth = minLeftPanelWidth;
+  leftPanelWidth.value = newWidth;
 }
 </script>
 <style scoped>
@@ -46,17 +52,17 @@ const handleMouseMove = (e) => {
 }
 
 .divider {
-  width: 8px;
+  position: relative;
+  width: 10px;
   cursor: col-resize;
-  background-color: #dddddd;
-}
-
-.left {
-  background: moccasin;
+  background-color: #f3f3f3;
 }
 
 .right {
-  background: #f0f0f0;
+  background: #f3f3f3;
   flex-grow: 1;
+  padding: 10px 10px 10px 0;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 </style>
