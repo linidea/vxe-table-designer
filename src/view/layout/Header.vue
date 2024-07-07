@@ -19,7 +19,7 @@
   </div>
 </template>
 <script setup>
-import Icon from "@c/icon/index.vue";
+import Icon from "@components/icon/index.vue";
 
 const handleDropdownItem = (name) => {
   if (name === 'vxeTable') {

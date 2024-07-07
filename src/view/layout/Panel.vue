@@ -8,7 +8,7 @@
   </div>
 </template>
 <script setup>
-import Preview from "@v/preview/index.vue";
+import Preview from "@view/preview/index.vue";
 //
 import {ref} from 'vue'
 

@@ -5,8 +5,8 @@
   </div>
 </template>
 <script setup>
-import Sidebar from "@v/layout/Sidebar.vue";
-import Panel from "@v/layout/Panel.vue";
+import Sidebar from "@view/layout/Sidebar.vue";
+import Panel from "@view/layout/Panel.vue";
 </script>
 <style scoped>
 .main {

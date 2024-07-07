@@ -3,8 +3,8 @@
   <Main/>
 </template>
 <script setup>
-import Header from "@v/layout/Header.vue";
-import Main from "@v/layout/Main.vue";
+import Header from "@view/layout/Header.vue";
+import Main from "@view/layout/Main.vue";
 </script>
 <style scoped>
 
