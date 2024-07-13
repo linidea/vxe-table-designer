@@ -3,18 +3,18 @@ import {defineStore} from 'pinia'
 
 export const useSidebarStore = defineStore('sidebar', {
     state: () => ({
-        active: '',
+        sidebarName: 'tableBase',
     }),
     getters: {
         // 获取当前激活的菜单
-        getActiveName() {
-            return this.active;
+        mySidebarName(state) {
+            return state.sidebarName;
         },
     },
     actions: {
         // 设置当前激活的菜单
-        setActiveName(name) {
-            this.active = name;
+        setSidebarName(name) {
+            this.sidebarName = name;
         },
     },
 })
