@@ -15,7 +15,7 @@ import {useTableStore} from "@store/modules/table.js";
 
 //
 const tableStore = useTableStore();
-const tableData = ref(tableStore.getTableData);
+const tableData = ref(tableStore.tableData);
 
 </script>
 
