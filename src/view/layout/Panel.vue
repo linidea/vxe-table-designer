@@ -1,6 +1,8 @@
 <template>
   <div class="panel">
-    <div :style="{width:leftPanelWidth + 'px'}"></div>
+    <div :style="{width:leftPanelWidth + 'px'}">
+      <Widget/>
+    </div>
     <div class="divider" @mousedown="startDragging"></div>
     <div class="right">
       <Preview/>
@@ -8,6 +10,7 @@
   </div>
 </template>
 <script setup>
+import Widget from "@view/layout/Widget.vue";
 import Preview from "@view/preview/index.vue";
 //
 import {ref} from 'vue'
