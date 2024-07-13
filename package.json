@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "element-plus": "^2.7.6",
+    "monaco-editor": "^0.50.0",
     "pinia": "^2.1.7",
     "vue": "^3.4.29",
     "vxe-table": "^4.7.45"
