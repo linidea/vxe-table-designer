@@ -7,6 +7,7 @@ import Book from './svg/book.svg'
 import Braces from './svg/braces.svg'
 import Database from './svg/database.svg'
 import Json from './svg/json.svg'
+import Column from './svg/column.svg'
 
 export default {
     'vite': Vite,
@@ -18,4 +19,5 @@ export default {
     'braces': Braces,
     'database': Database,
     'json': Json,
+    'column': Column,
 }
