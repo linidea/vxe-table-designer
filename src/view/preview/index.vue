@@ -10,12 +10,12 @@
   </div>
 </template>
 <script setup>
-import {ref} from 'vue'
+import {computed} from 'vue'
 import {useTableStore} from "@store/modules/table.js";
 
 //
 const tableStore = useTableStore();
-const tableData = ref(tableStore.tableData);
+const tableData = computed(() => tableStore.tableData);
 
 </script>
 
