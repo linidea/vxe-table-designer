@@ -1,5 +1,6 @@
 // 表格数据
 import {defineStore} from "pinia";
+import {debounce} from "lodash";
 import TableData from "@config/table/data.js";
 
 export const useTableStore = defineStore('table', {
@@ -13,8 +14,8 @@ export const useTableStore = defineStore('table', {
         },
     },
     actions: {
-        // 设置表格数据
-        setTableData(data) {
+        // 设置表格数据(实时更新消耗性能,这里使用防抖)
+        setTableData: debounce(function (data) {
             try {
                 if (typeof data === 'string') {
                     data = JSON.parse(data);
@@ -23,6 +24,6 @@ export const useTableStore = defineStore('table', {
             } catch (e) {
                 console.error('setTableData error:', e);
             }
-        }
+        }, 500),
     },
 });
