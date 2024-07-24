@@ -1,5 +1,6 @@
 <template>
-  <MonacoEditor language="json" :value="tableData" @update:value="updateTableData"/>
+  <div class="widget-title">表格数据</div>
+  <MonacoEditor language="json" :value="tableData" @update:value="updateData"/>
 </template>
 <script setup>
 import MonacoEditor from '@components/monaco/index.vue';
@@ -12,7 +13,7 @@ const tableStore = useTableStore();
 //
 const tableData = computed(() => JSON.stringify(tableStore.tableData, null, 2));
 //
-const updateTableData = (value) => {
+const updateData = (value) => {
   tableStore.setTableData(value);
 }
 </script>
