@@ -13,11 +13,7 @@ const tableStore = useTableStore();
 const tableData = computed(() => JSON.stringify(tableStore.tableData, null, 2));
 //
 const updateTableData = (value) => {
-  try {
-    tableStore.setTableData(value);
-  } catch (error) {
-    console.error('Invalid JSON:', error);
-  }
+  tableStore.setTableData(value);
 }
 </script>
 <style scoped>

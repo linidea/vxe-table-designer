@@ -15,7 +15,14 @@ export const useTableStore = defineStore('table', {
     actions: {
         // 设置表格数据
         setTableData(data) {
-            this.tableData = data;
+            try {
+                if (typeof data === 'string') {
+                    data = JSON.parse(data);
+                }
+                this.tableData = data;
+            } catch (e) {
+                console.error('setTableData error:', e);
+            }
         }
     },
 });
