@@ -3,6 +3,7 @@
 </template>
 <script setup>
 import {ref, watch, onMounted, onBeforeUnmount} from 'vue';
+import lodash from 'lodash';
 import * as monaco from 'monaco-editor';
 import './worker.js';
 //
@@ -15,6 +16,12 @@ const emits = defineEmits(['update:value']);
 //
 const editorRef = ref(null);
 let editorInstance = null;
+
+// 提取防抖函数到外部变量,避免每次渲染都创建新的防抖函数
+const debouncedUpdate = lodash.debounce((editorInstance = {}, emits) => {
+  emits('update:value', editorInstance.getValue());
+}, 500);
+
 //
 onMounted(() => {
   editorInstance = monaco.editor.create(editorRef.value, {
@@ -22,7 +29,7 @@ onMounted(() => {
     language: props.language || 'javascript',
   });
   editorInstance.onDidChangeModelContent(() => {
-    emits('update:value', editorInstance.getValue());
+    debouncedUpdate(editorInstance, emits);
   });
   addCustomScrollbarStyle(editorInstance);
 })
