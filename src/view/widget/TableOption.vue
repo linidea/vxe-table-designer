@@ -1,5 +1,4 @@
 <template>
-  <div class="widget-title">表格配置</div>
   <MonacoEditor language="json" :value="''" @update:value="updateOption"/>
 </template>
 <script setup>
